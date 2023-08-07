@@ -61,9 +61,9 @@ export const MyDraggableCard = ({ index, title }: MyDraggableCardProps) => {
         key={index}
       >
         <Container style={{ opacity }}>
-          <h3>
+          <Title>
             {index + 1}: {title}
-          </h3>
+          </Title>
           <MyDragButton onClick={(e) => e.preventDefault()} ref={drag}>
             Drag here
           </MyDragButton>
@@ -77,6 +77,13 @@ const Wrapper = styled.div`
   position: relative;
 `;
 
+const Title = styled.h3`
+  text-overflow: ellipsis;
+  max-width: 30rem;
+  white-space: nowrap;
+  overflow: hidden;
+`;
+
 const Container = styled.div`
   background-color: #fff;
   border-radius: 0.5rem;
@@ -86,7 +93,6 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1200px;
   user-select: none;
 `;
 
