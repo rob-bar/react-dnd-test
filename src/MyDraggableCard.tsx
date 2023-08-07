@@ -150,6 +150,3 @@ export function getDropBorder({
     border: 0.0625rem solid transparent;
   `;
 }
-function setImmediate(arg0: () => any) {
-  throw new Error("Function not implemented.");
-}
